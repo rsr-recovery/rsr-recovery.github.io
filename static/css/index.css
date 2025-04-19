@@ -3,6 +3,28 @@ body {
 }
 
 
+#video_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#video_grid > .video_wrapper {
+  width: 25%;
+}
+
+#video_grid > .video_wrapper > .video_container {
+  display: grid;
+}
+
+#video_grid > .video_wrapper > .video_container > video {
+  width: 100%;
+  height: auto;
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+}
+
 .footer a {
     /*font-size: 25px;*/
     color: #000;
