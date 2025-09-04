@@ -2,6 +2,60 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+#video_background {
+  width: 100%;
+  /* 使用视口高度确保在各种设备上都占满屏幕高度 */
+  height: 100vh;
+  overflow: hidden;
+  /* 确保在窗口大小改变时平滑过渡 */
+  transition: all 0.3s ease;
+}
+
+.video_wrapper, .video_container {
+  width: 100%;
+  height: 100%;
+}
+
+/* 视频响应式设置 */
+video {
+  /* 关键属性：保持视频比例并填充容器 */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* 确保视频在窗口大小变化时能正确重绘 */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* 页面内容样式 */
+.page-content {
+  background-color: #fff;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.page-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+/* 用于创建滚动空间 */
+.spacer {
+  height: 2000px;
+}
+
+/* 针对不同屏幕尺寸的优化 */
+@media (max-width: 768px) {
+  .page-content {
+      padding: 1rem;
+  }
+  
+  .page-content h1 {
+      font-size: 2rem;
+  }
+}
+
+
 
 #video_grid {
   display: flex;
